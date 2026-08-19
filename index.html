@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PORTFOLIO.EXE — Diego Nizama | Salesforce Dev & Ing. de Sistemas</title>
+  <meta name="description" content="Portafolio profesional de Diego Alonso Nizama Villar — Ingeniero de Sistemas Computacionales y Salesforce Developer/Administrator." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&family=Share+Tech+Mono&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="nav-logo">
+      <img src="assets/pixel-monitor.svg" alt="Monitor pixel art" class="nav-icon" id="nav-icon" />
+      <span class="logo-text">PORTFOLIO.EXE</span>
+    </div>
+    <div class="nav-links" id="nav-links">
+      <a href="#inicio" class="nav-link active" id="nav-inicio">
+        <span class="nav-icon-emoji">🏠</span> Inicio
+      </a>
+      <a href="#experiencia" class="nav-link" id="nav-proyectos">
+        <span class="nav-icon-emoji">📁</span> Experiencia
+      </a>
+      <a href="#tecnologias" class="nav-link" id="nav-tecnologias">
+        <span class="nav-icon-emoji">⚙️</span> Skills
+      </a>
+      <a href="#sobre-mi" class="nav-link" id="nav-sobre">
+        <span class="nav-icon-emoji">👤</span> Perfil
+      </a>
+      <a href="#contacto" class="nav-link" id="nav-contacto">
+        <span class="nav-icon-emoji">📧</span> Contacto
+      </a>
+    </div>
+    <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="inicio" aria-label="Sección de inicio">
+    <div class="hero-bg" aria-hidden="true">
+      <img src="assets/hero-bg.jpg" alt="" class="hero-img" loading="eager" />
+      <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Floating Win98 windows -->
+    <div class="win98-window notes-window" id="notes-window" aria-label="Ventana de notas" role="complementary">
+      <div class="win98-titlebar">
+        <span class="win98-title">📝 pendientes.txt</span>
+        <div class="win98-controls">
+          <button class="win98-btn minimize" aria-label="Minimizar">_</button>
+          <button class="win98-btn maximize" aria-label="Maximizar">□</button>
+          <button class="win98-btn close" aria-label="Cerrar">✕</button>
+        </div>
+      </div>
+      <div class="win98-body notes-body">
+        <p class="win98-text"><strong>Tasks (Sprint):</strong></p>
+        <p class="win98-text">- Refactorizar Triggers Apex</p>
+        <p class="win98-text">- Deploy en AWS EC2</p>
+        <p class="win98-text">- Automatizar flujos LWC</p>
+        <p class="win98-text">- Superbadge en Trailhead ☁️</p>
+      </div>
+    </div>
+
+    <div class="win98-window sobre-window" id="sobre-window" aria-label="Ventana sobre mí" role="complementary">
+      <div class="win98-titlebar">
+        <span class="win98-title">💻 system_info.exe</span>
+        <div class="win98-controls">
+          <button class="win98-btn minimize" aria-label="Minimizar">_</button>
+          <button class="win98-btn maximize" aria-label="Maximizar">□</button>
+          <button class="win98-btn close" aria-label="Cerrar">✕</button>
+        </div>
+      </div>
+      <div class="win98-body dialog-body">
+        <div class="dialog-icon">⚙️</div>
+        <div class="dialog-text">
+          <p class="win98-text">Automatizo procesos.</p>
+          <p class="win98-text">Integro APIs y Cloud.</p>
+          <p class="win98-text">Desarrollador Salesforce.</p>
+          <p class="win98-text">Amante de la lógica.</p>
+        </div>
+        <button class="win98-ok-btn" id="ok-btn">OK</button>
+      </div>
+    </div>
+
+    <!-- Hero content -->
+    <div class="hero-content" id="hero-content">
+      <div class="hero-avatar-wrap" id="hero-avatar">
+        <img src="assets/avatar.jpg" alt="Foto de Diego Nizama" class="hero-avatar" />
+        <div class="avatar-pixel-border" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero-text">
+        <h1 class="hero-greeting" id="hero-heading">
+          <span class="greeting-word">Hola,</span>
+          <span class="greeting-word">Soy</span>
+          <span class="greeting-name">Diego</span>
+        </h1>
+        <p class="hero-title" id="hero-title">
+          <span class="title-cursor" aria-hidden="true">›</span>
+          Ingeniero de Sistemas & Salesforce Dev
+        </p>
+        <p class="hero-bio" id="hero-bio">
+          Egresado de Ingeniería de Sistemas y Computación con sólida base técnica. 
+          Me especializo en automatización de procesos, integraciones API y desarrollo de infraestructura Cloud. 
+          Actualmente enfocado en potenciar ecosistemas comerciales como Salesforce Administrator & Developer.
+        </p>
+        <div class="hero-cta" id="hero-cta">
+          <a href="#experiencia" class="cta-btn cta-primary" id="btn-proyectos">
+            <span class="btn-icon">▶</span> Ver experiencia
+          </a>
+          <a href="#contacto" class="cta-btn cta-secondary" id="btn-contactar">
+            <span class="btn-icon">✉</span> Contactar
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scanlines overlay -->
+    <div class="scanlines" aria-hidden="true"></div>
+  </section>
+
+  <!-- EXPERIENCIA Y PROYECTOS -->
+  <section class="section projects-section" id="experiencia" aria-label="Experiencia">
+    <div class="section-header">
+      <div class="section-title-wrap">
+        <span class="section-tag" aria-hidden="true">📁</span>
+        <h2 class="section-title">Experiencia Destacada</h2>
+        <span class="section-tag-end" aria-hidden="true">.exe</span>
+      </div>
+      <p class="section-subtitle">Proyectos y soluciones implementadas en el mundo real</p>
+    </div>
+
+    <div class="projects-grid" id="projects-grid" role="list">
+
+      <article class="project-card" id="proj-1" role="listitem">
+        <div class="project-card-header">
+          <div class="project-win-bar">
+            <span class="win-dot red"></span>
+            <span class="win-dot yellow"></span>
+            <span class="win-dot green"></span>
+            <span class="win-filename">api_whatsapp_ia.exe</span>
+          </div>
+        </div>
+        <div class="project-preview">
+          <div class="project-terminal" aria-label="Vista previa del proyecto">
+            <span class="terminal-prompt">ubuntu@aws-ec2:~$ </span>
+            <span class="terminal-name">pm2 start server.js</span>
+            <br/>
+            <span class="terminal-line">Node API: <span class="status-green">ONLINE ✓</span> AI Bot: <span class="status-green">READY</span></span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-name">API WhatsApp con IA & CRM (Brandkap)</h3>
+          <p class="project-desc">Diseño y despliegue en AWS de API en Node.js (whatsapp-web.js) integrada con IA (Botpress) para calificación de leads. Conexión bidireccional automatizada con HubSpot CRM y CI/CD en Jenkins.</p>
+          <div class="project-tags" aria-label="Tecnologías usadas">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">AWS EC2</span>
+            <span class="tech-tag">HubSpot API</span>
+            <span class="tech-tag">Botpress (IA)</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" id="proj-2" role="listitem">
+        <div class="project-card-header">
+          <div class="project-win-bar">
+            <span class="win-dot red"></span>
+            <span class="win-dot yellow"></span>
+            <span class="win-dot green"></span>
+            <span class="win-filename">plataforma_evaluacion.exe</span>
+          </div>
+        </div>
+        <div class="project-preview">
+          <div class="project-terminal" aria-label="Vista previa del proyecto">
+            <span class="terminal-prompt">Browser> </span>
+            <span class="terminal-name">navigator.mediaDevices.getUserMedia()</span>
+            <br/>
+            <span class="terminal-line">Proctoring System: <span class="status-green">ACTIVE 👁️</span></span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-name">Sistema de Proctoring & Exámenes</h3>
+          <p class="project-desc">Plataforma Frontend-only de evaluación académica con sistema anti-trampas (monitoreo del DOM y cámara web PIP). Motor asíncrono con temporizadores independientes y persistencia en localStorage.</p>
+          <div class="project-tags" aria-label="Tecnologías usadas">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">CSS3 / DOM APIs</span>
+            <span class="tech-tag">LocalStorage</span>
+            <span class="tech-tag">UI/UX</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" id="proj-3" role="listitem">
+        <div class="project-card-header">
+          <div class="project-win-bar">
+            <span class="win-dot red"></span>
+            <span class="win-dot yellow"></span>
+            <span class="win-dot green"></span>
+            <span class="win-filename">salesforce_dev.exe</span>
+          </div>
+        </div>
+        <div class="project-preview">
+          <div class="project-terminal" aria-label="Vista previa del proyecto">
+            <span class="terminal-prompt">sfdx> </span>
+            <span class="terminal-name">force:source:deploy -p force-app</span>
+            <br/>
+            <span class="terminal-line">Apex Tests: <span class="status-green">100% PASSED ✓</span></span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-name">Desarrollo Salesforce & Automatización</h3>
+          <p class="project-desc">Desarrollo freelance de soluciones empresariales. Creación de LWC, clases Apex, Triggers y Flows para automatización de procesos. Integración de APIs REST y gestión avanzada de permisos (Permission Sets).</p>
+          <div class="project-tags" aria-label="Tecnologías usadas">
+            <span class="tech-tag">Salesforce</span>
+            <span class="tech-tag">Apex / SOQL</span>
+            <span class="tech-tag">LWC</span>
+            <span class="tech-tag">Flows</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- TECNOLOGÍAS Y SKILLS -->
+  <section class="section tech-section" id="tecnologias" aria-label="Tecnologías">
+    <div class="section-header">
+      <div class="section-title-wrap">
+        <span class="section-tag" aria-hidden="true">⚙️</span>
+        <h2 class="section-title">Habilidades y Stack</h2>
+        <span class="section-tag-end" aria-hidden="true">.dll</span>
+      </div>
+      <p class="section-subtitle">Herramientas que utilizo para construir soluciones</p>
+    </div>
+
+    <div class="tech-grid" id="tech-grid" role="list">
+      <div class="tech-item" id="tech-salesforce" role="listitem">
+        <div class="tech-icon" aria-hidden="true">☁️</div>
+        <span class="tech-name">Salesforce Dev / Admin</span>
+        <div class="tech-bar-wrap" aria-label="Nivel de Salesforce">
+          <div class="tech-bar" data-width="85"></div>
+        </div>
+      </div>
+      <div class="tech-item" id="tech-js" role="listitem">
+        <div class="tech-icon" aria-hidden="true">🟨</div>
+        <span class="tech-name">JavaScript & Node.js</span>
+        <div class="tech-bar-wrap" aria-label="Nivel de JS">
+          <div class="tech-bar" data-width="80"></div>
+        </div>
+      </div>
+      <div class="tech-item" id="tech-java" role="listitem">
+        <div class="tech-icon" aria-hidden="true">☕</div>
+        <span class="tech-name">Java & C++ (POO)</span>
+        <div class="tech-bar-wrap" aria-label="Nivel de Java">
+          <div class="tech-bar" data-width="75"></div>
+        </div>
+      </div>
+      <div class="tech-item" id="tech-db" role="listitem">
+        <div class="tech-icon" aria-hidden="true">🗃️</div>
+        <span class="tech-name">Bases de Datos (SQL, SOQL)</span>
+        <div class="tech-bar-wrap" aria-label="Nivel de SQL">
+          <div class="tech-bar" data-width="85"></div>
+        </div>
+      </div>
+      <div class="tech-item" id="tech-aws" role="listitem">
+        <div class="tech-icon" aria-hidden="true">☁️</div>
+        <span class="tech-name">AWS, CI/CD & APIs</span>
+        <div class="tech-bar-wrap" aria-label="Nivel de AWS y Backend">
+          <div class="tech-bar" data-width="70"></div>
+        </div>
+      </div>
+      <div class="tech-item" id="tech-sap" role="listitem">
+        <div class="tech-icon" aria-hidden="true">🏢</div>
+        <span class="tech-name">SAP MM (Key User)</span>
+        <div class="tech-bar-wrap" aria-label="Nivel de SAP">
+          <div class="tech-bar" data-width="75"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section class="section about-section" id="sobre-mi" aria-label="Sobre mí">
+    <div class="section-header">
+      <div class="section-title-wrap">
+        <span class="section-tag" aria-hidden="true">👤</span>
+        <h2 class="section-title">Perfil Profesional</h2>
+        <span class="section-tag-end" aria-hidden="true">.txt</span>
+      </div>
+    </div>
+
+    <div class="about-container" id="about-container">
+      <div class="about-window win98-window" id="about-window">
+        <div class="win98-titlebar">
+          <span class="win98-title">📄 diego_nizama.txt — Bloc de notas</span>
+          <div class="win98-controls">
+            <button class="win98-btn minimize" aria-label="Minimizar">_</button>
+            <button class="win98-btn maximize" aria-label="Maximizar">□</button>
+            <button class="win98-btn close" aria-label="Cerrar">✕</button>
+          </div>
+        </div>
+        <div class="win98-body about-body">
+          <p class="about-line"><span class="about-label">NOMBRE:</span> Diego Alonso Nizama Villar</p>
+          <p class="about-line"><span class="about-label">PROFESIÓN:</span> Ingeniero de Sistemas Computacionales</p>
+          <p class="about-line"><span class="about-label">UBICACIÓN:</span> Lima, Perú 🇵🇪</p>
+          <p class="about-line"><span class="about-label">ENFOQUE:</span> Salesforce, Integraciones API, Backend</p>
+          <br/>
+          <p class="about-paragraph">
+            Con experiencia comprobada implementando soluciones tecnológicas como APIs en Node.js, 
+            plataformas anti-trampas, e integraciones en la nube (AWS). He trabajado conectando CRMs, 
+            sistemas de agendamiento e inteligencia artificial.
+          </p>
+          <br/>
+          <p class="about-paragraph">
+            Actualmente potencio mi carrera especializándome en el desarrollo sobre el ecosistema 
+            <strong>Salesforce</strong> (Apex, LWC, Automations). Adicionalmente, mi experiencia internacional en 
+            Estados Unidos (Work and Travel) ha fortalecido mi nivel de inglés y mis habilidades blandas 
+            para trabajar en equipos diversos.
+          </p>
+          <br/>
+          <p class="about-line"><span class="about-label">INTERESES:</span> Cloud Computing, Desarrollo Backend, Machine Learning, Fútbol</p>
+          <p class="about-line"><span class="about-label">STATUS:</span> <span class="status-green">Disponible para retos tecnológicos ✓</span></p>
+        </div>
+      </div>
+
+      <div class="about-stats" id="about-stats">
+        <div class="stat-card" id="stat-1">
+          <div class="stat-number" data-target="3" aria-label="Experiencia profesional">Experiencia</div>
+          <div class="stat-label">Multidisciplinaria IT</div>
+        </div>
+        <div class="stat-card" id="stat-2">
+          <div class="stat-number" data-target="15" aria-label="Salesforce">Salesforce</div>
+          <div class="stat-label">Admin & Dev</div>
+        </div>
+        <div class="stat-card" id="stat-3">
+          <div class="stat-number" data-target="9" aria-label="Integraciones">Bilingüe</div>
+          <div class="stat-label">Inglés Intermedio</div>
+        </div>
+        <div class="stat-card" id="stat-4">
+          <div class="stat-number" data-target="100" aria-label="100% resolutivo">SAP MM</div>
+          <div class="stat-label">Especialización</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section contact-section" id="contacto" aria-label="Contacto">
+    <div class="section-header">
+      <div class="section-title-wrap">
+        <span class="section-tag" aria-hidden="true">📧</span>
+        <h2 class="section-title">Contacto</h2>
+        <span class="section-tag-end" aria-hidden="true">.exe</span>
+      </div>
+      <p class="section-subtitle">¿Buscas un Developer o Salesforce Admin? ¡Hablemos!</p>
+    </div>
+
+    <div class="contact-container" id="contact-container">
+      <div class="contact-form-wrap win98-window" id="contact-window">
+        <div class="win98-titlebar">
+          <span class="win98-title">📧 nuevo_mensaje.exe</span>
+          <div class="win98-controls">
+            <button class="win98-btn minimize" aria-label="Minimizar">_</button>
+            <button class="win98-btn maximize" aria-label="Maximizar">□</button>
+            <button class="win98-btn close" aria-label="Cerrar">✕</button>
+          </div>
+        </div>
+        <div class="win98-body form-body">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Para: Diego Nizama</label>
+              <label for="contact-name" class="form-label sub">De:</label>
+              <input type="text" id="contact-name" name="name" class="form-input" placeholder="Tu nombre completo" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="contact-email" class="form-label">Email:</label>
+              <input type="email" id="contact-email" name="email" class="form-input" placeholder="tu@email.com" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="contact-subject" class="form-label">Asunto:</label>
+              <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="Oportunidad laboral, proyecto, etc." />
+            </div>
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Mensaje:</label>
+              <textarea id="contact-message" name="message" class="form-textarea" rows="5" placeholder="Cuéntame sobre la posición o proyecto..." required></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="cta-btn cta-primary" id="submit-btn">
+                <span class="btn-icon">📤</span> Enviar mensaje
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="contact-info" id="contact-info">
+        <div class="contact-item" id="contact-github">
+          <span class="contact-icon">🐱</span>
+          <div>
+            <div class="contact-platform">GitHub</div>
+            <a href="https://github.com/DyermanDN" class="contact-link" target="_blank" rel="noopener noreferrer">github.com/DyermanDN</a>
+          </div>
+        </div>
+        <div class="contact-item" id="contact-linkedin">
+          <span class="contact-icon">💼</span>
+          <div>
+            <div class="contact-platform">LinkedIn</div>
+            <a href="https://www.linkedin.com/in/diego-alonso-nizama-villar-59847322a" class="contact-link" target="_blank" rel="noopener noreferrer">Diego Alonso Nizama Villar</a>
+          </div>
+        </div>
+        <div class="contact-item" id="contact-trailhead">
+          <span class="contact-icon">☁️</span>
+          <div>
+            <div class="contact-platform">Salesforce Trailhead</div>
+            <a href="https://www.salesforce.com/trailblazer/vfbas6s25er7hz56rt" class="contact-link" target="_blank" rel="noopener noreferrer">Trailblazer Profile</a>
+          </div>
+        </div>
+        <div class="contact-item" id="contact-location">
+          <span class="contact-icon">📍</span>
+          <div>
+            <div class="contact-platform">Ubicación</div>
+            <span class="contact-link">Lima, Perú 🇵🇪</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-logo">PORTFOLIO.EXE</div>
+      <div class="footer-social">
+        <a href="https://github.com/DyermanDN" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">🐱 GitHub</a>
+        <span class="footer-sep">·</span>
+        <a href="https://www.linkedin.com/in/diego-alonso-nizama-villar-59847322a" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">💼 LinkedIn</a>
+        <span class="footer-sep">·</span>
+        <a href="https://www.salesforce.com/trailblazer/vfbas6s25er7hz56rt" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Salesforce Trailhead">☁️ Trailhead</a>
+      </div>
+      <p class="footer-text">
+        Hecho con ☕ y mucho código por <strong>Diego Nizama</strong> &middot; 2024
+      </p>
+      <p class="footer-text small">
+        <span class="blink" aria-hidden="true">█</span> Todos los derechos reservados
+      </p>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="alert" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
