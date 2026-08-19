@@ -217,15 +217,17 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
   const form = $('#contact-form');
   if (!form) return;
 
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
 
     const name = $('#contact-name')?.value.trim();
     const email = $('#contact-email')?.value.trim();
+    const phone = $('#contact-phone')?.value.trim();
+    const subject = $('#contact-subject')?.value.trim() || 'Contacto desde Portafolio';
     const message = $('#contact-message')?.value.trim();
 
-    if (!name || !email || !message) {
-      showToast('⚠ Por favor completa todos los campos requeridos.', 'warn');
+    if (!name || !email || !phone || !message) {
+      showToast('⚠ Por favor completa todos los campos requeridos (incluyendo el teléfono).', 'warn');
       return;
     }
 
@@ -235,16 +237,45 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
     }
 
     const btn = $('#submit-btn');
+    const originalBtnHtml = btn.innerHTML;
     btn.textContent = '⏳ Enviando...';
     btn.disabled = true;
 
-    // Simulate send
-    setTimeout(() => {
-      form.reset();
-      btn.innerHTML = '<span class="btn-icon">📤</span> Enviar mensaje';
+    // URL de tu Google Apps Script
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby0UDHH3-DWilzJ4Nonx8RaMmx92MZYqpWUwwH2vP3eHkRrsyacAx3dt0gVWyDAzbYY/exec';
+
+    try {
+      // Petición a Google Scripts enviando un JSON como texto plano para evitar bloqueos CORS
+      const response = await fetch(scriptURL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8'
+        },
+        body: JSON.stringify({
+          nombre: name,
+          email: email,
+          telefono: phone,
+          asunto: subject,
+          mensaje: message
+        })
+      });
+
+      const result = await response.json();
+      
+      if (result.status === 'success') {
+        form.reset();
+        showToast('✓ ¡Mensaje enviado! Te responderé pronto 🚀');
+      } else {
+        throw new Error(result.message || 'Error desconocido');
+      }
+      
+    } catch (error) {
+      console.error('Error enviando formulario:', error);
+      showToast('❌ Hubo un error al enviar el mensaje. Intenta de nuevo.', 'warn');
+    } finally {
+      btn.innerHTML = originalBtnHtml;
       btn.disabled = false;
-      showToast('✓ ¡Mensaje enviado! Te responderé pronto 🚀');
-    }, 1500);
+    }
   });
 })();
 
